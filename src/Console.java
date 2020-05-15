@@ -188,16 +188,6 @@ public class Console {
                     System.out.println(o2 + " =");
                     s = in.nextLine().toLowerCase();
 
-                    /*
-                    while(!isValidTemp(s))
-                    {
-                        System.out.println("Enter a valid temperature:\n" +
-                                "1 - cold, 2- cool, 3 - neutral, 4 - warm, 5 - hot, 0 - blank overwrite, 6-9 - skip");
-                        s = in.nextLine().toLowerCase();
-                    }
-                    t2 = dl.convertChar(s.charAt(0));
-                    */
-
                     t2 = dl.stringToTempEnum(s);
 
 
@@ -287,19 +277,4 @@ public class Console {
         }
     }
 
-    /*
-    public TemperatureEnum convert(String str)
-    {
-
-        // can only take number inputs at present
-        if(!str.isEmpty()) {
-            switch (str.charAt(0)) {
-                case 1:
-                    return TemperatureEnum.COLD;
-            }
-        }
-
-        // un-intentionally blank
-        return TemperatureEnum.SKIP;
-    }*/
 }
